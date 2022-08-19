@@ -10,13 +10,17 @@
 </head>
 <body>
     <head>
-        <div class="background">
-            <img src="img/sa.jpg">
-            <img src="img/na.jpg">
-        </div>
     </head>
     <main>
-        <form id="login-form" class="hidden">
+        <div class="weatherinfo">
+            Weather information
+        </div>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+        <h2 id="clock">00:00</h2>
+        <form id="login-form" class="hidden css" >
             <input 
             required 
             maxlength="14" 
@@ -25,7 +29,6 @@
             <button>Log In</button>
         </form>
         <h1 id="greeting" class="hidden"></h1>
-        <h2 id="clock">00:00</h2>
         <form id="todo-form">
             <input type="text" placeholder="Write a To Do and Press Enter" required>
         </form>
@@ -34,13 +37,9 @@
             <span></span>
             <span></span>
         </div>
-        <div id="weather">
-            <span></span>
-            <span></span>
-        </div>
     </main>
-    <script src="js/clock.js"></script>
     <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>

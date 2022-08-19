@@ -1,79 +1,170 @@
 
-
-html,body {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-} 
-body {
-    position: relative;
+.css{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 35px;
 }
-main{
-    animation: bgColor 6s ease-in forwards;
+.css input{
+    font-family: Serif;
+    width: 250px;
+    height: 20px;
+    border: 1px solid greenyellow;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 15px;
 }
-
+.css button {
+    font-family: Serif;
+    width: 150px;
+    height: 18px;
+    border: 0px yellow;
+    border-radius: 20px;
+    background-color: yellow;
+}
+#greeting {
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: darkblue;
+}
+#todo-form input{
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Serif;
+    background-color: blanchedalmond;
+    border: 0px;
+    border-radius: 20px;
+}
+#todo-form input:hover{
+    animation: toDo 0.5s linear forwards;
+}
 .hidden {
     display: none;
 }
-.background {
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#bgr {
     position: absolute;
-    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    z-index: -999;
+    opacity: 0.8;
+    display: block;
+    margin:0;
+    padding:0;
+    list-style:none;
+    left:0;
+    top:0;
+}
+main {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.background img:first-child{
-    display: block;
-    width: 50vw;
-    height: 100vh;
-    animation: sasuke 2s ease-in-out forwards;
-}
-.background img:last-child{
-    display: block;
-    width: 50vw;
-    height: 100vh;
-    animation: naruto 2s ease-in-out forwards;
-}
-@keyframes bgColor {
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 0.1;
-    }
-    80%{
-        opacity: 1;
-    }
+ul li {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    transition: transform 0.5s ease-in-out;
 
 }
-@keyframes sasuke {
+ul li:hover {
+    transform: scale(1.1);
+}
+ul span {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:darkcyan;
+    width: 100%;
+    padding-left: 10px;
+
+}
+ul button {
+    margin-left:10px;
+    border: 0px;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    width: 90px;
+    height: 20px;
+    background-color: yellow;
+    color: orange;
+    transition: transform 1s ease-in-out;
+}
+ul button:hover {
+    background-color: aqua;
+}
+#quote{
+    margin: 0px 50px;
+    color: black;
+    font-weight: 600;
+}
+#weather{
+    font-size: large;
+    font-weight: bold;
+    color: tomato;
+    transition: transform 1s ease-in-out;
+}
+#weather:hover{
+    transform: scale(1.5);
+    color: aqua;
+}
+#quote {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#quote span:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#quote span:last-child{
+    margin-top : 20px;
+    font-size: 50px;
+}
+#clock {
+    font-size: 48px;
+    font-weight: bold;
+}
+@keyframes hearBeat {
     0%{
-        transform: translateX(-500px);
-        opacity: 1;
+        background-color: yellow;
     }
-    75%{
-        opacity: 1;
+    50% {
+        background-color: yellowgreen;
+        transform: scale(1.05);
     }
     100%{
-        transform: 0;
-        opacity: 0;
-        visibility: hidden;
+        background-color: yellow;
     }
 }
-@keyframes naruto {
-    0%{
-        transform: translateX(500px);
-        opacity: 1;
+@keyframes toDo {
+    form {
+        width: 250px;
     }
-    75%{
-        opacity: 1;
+    to {
+        width: 300px;
     }
-    100%{
-        transform: 0;
-        opacity: 0;
-        visibility: hidden;
-    }
+}
+#login-form input:hover{
+    will-change: transform;
+    animation: hearBeat 0.5s linear infinite;
+}
+#login-form button:hover{
+    animation: hearBeat 0.5s linear infinite;
 }
